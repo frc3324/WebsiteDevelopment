@@ -1,0 +1,17 @@
+<html>
+    <head>
+      <title>Scouting App 2020</title>
+    </head>
+    <body>
+        <form>
+	<input type="button" onclick="" value="Lower Hit">
+        <input type="button" onclick="incrementButton(this)" value="0">
+        <input type="button" onclick= value="Outer Hit">
+        <input type="button" onclick= value="Outer Miss">
+        <input type="button" onclick= value="Inner Hit">
+        <input type="button" onclick= value="Inner Miss">
+	</form>
+        {% block content %}{% endblock %}
+	<script src="{{ url_for('static',filename = 'index.js') }}"></script>
+    </body>
+</html>
