@@ -1,15 +1,27 @@
+<!DOCTYPE html>
 <html>
     <head>
       <title>Scouting App 2020</title>
     </head>
     <body>
-        <form>
-	<input type="button" onclick="" value="Lower Hit">
+        <form method="POST">
+	  <div>
+	    <h6>Low Hit</h6>
+	    <button type="button" onclick="incrementButton(this)">^</button><br>
+	    <input name="lowHit" readonly="readonly" value="0" min="0" type="number"><br>
+	    <button type="button" onclick="decrementButton(this)">v</button>
+	  </div>
+	<h6>Low Miss</h6>
+        <input id="Low Miss" type="button" onclick="incrementButton(this)" value="0">
+	<h6>Outer Hit</h6>
         <input type="button" onclick="incrementButton(this)" value="0">
-        <input type="button" onclick= value="Outer Hit">
-        <input type="button" onclick= value="Outer Miss">
-        <input type="button" onclick= value="Inner Hit">
-        <input type="button" onclick= value="Inner Miss">
+	<h6>Outer Miss</h6>
+        <input type="button" onclick="incrementButton(this)" value="0">
+	<h6>Inner Hit</h6>
+        <input type="button" onclick="incrementButton(this)" value="0">
+	<h6>Inner Miss</h6>
+        <input type="button" onclick="incrementButton(this)" value="0">
+	<input type="submit" onclick="return false">
 	</form>
         {% block content %}{% endblock %}
 	<script src="{{ url_for('static',filename = 'index.js') }}"></script>
